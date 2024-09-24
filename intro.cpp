@@ -13,15 +13,21 @@ int main() {
         // child process failed, exit the program
         fprintf(stderr, "Child process was not created");
         exit(1);
+    }
     else if(child2 == 0){
         // child2 process created successfully
         printf("Child2 Process (pid:%d): Hello world!", (int) getpid());
+        cout << endl;
     }
-    } else if (child == 0) {
+    else if (child == 0) {
         // child process created successfully
         printf("Child Process (pid:%d): Hello world!", (int) getpid());
-    } else {
-        // parent process runs this branch
-        printf("Parent Process (pid:%d): Hello world!", child, (int) getpid());
+        cout << endl;
     }
+    else {
+        // parent process runs this branch
+        printf("Parent Process (pid:%d): Hello world!", (int) getpid());
+        cout << endl;
+    }
+    return 0;
 }
